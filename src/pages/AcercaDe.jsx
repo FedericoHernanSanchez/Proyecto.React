@@ -12,7 +12,6 @@ const AcercaDe = ({cart,borrarProducto}) => {
         En esta tienda, no solo vendemos ropa, creamos identidad. Con años de experiencia en el mundo de la moda, nos especializamos en prendas que combinan calidad, 
         tendencia y comodidad, diseñadas para aquellos que buscan destacar con autenticidad.
 
-        ASDADAS
       </p>
       <Footer/>
     </>
