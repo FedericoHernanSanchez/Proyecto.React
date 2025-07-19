@@ -1,21 +1,37 @@
 import React from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
+import './styleAcercaDe.css'
 
-const AcercaDe = ({cart,borrarProducto}) => {
+
+
+const AcercaDe = () => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart}/>
-      <h1>Acerca de nosotros</h1>
-      <h3>Moda con Experiencia, Estilo con Pasión</h3>
-      <p>
-        En esta tienda, no solo vendemos ropa, creamos identidad. Con años de experiencia en el mundo de la moda, nos especializamos en prendas que combinan calidad, 
-        tendencia y comodidad, diseñadas para aquellos que buscan destacar con autenticidad.
+      <Header />
+      <section className="acerca-container">
+        <img
+          src="/underground.PNG"
+          alt="Descripción de la imagen"
+          className='img-acercaDe'
 
-      </p>
-      <Footer/>
+        />
+        <h1>¿Quieres saber más sobre UnderGround?</h1>
+        <p>
+          Somos una empresa dedicada a la creación y venta de ropa personalizada,
+          confeccionada con materiales de la más alta calidad para garantizar
+          comodidad y durabilidad. Nuestra línea incluye desde joggers y buzos hasta
+          camisetas y accesorios, todos diseñados para quienes buscan un estilo único y auténtico.
+        </p>
+        <p>
+          Cada prenda es cuidadosamente diseñada para combinar estilo y funcionalidad,
+          adaptándose a las últimas tendencias de moda urbana sin sacrificar el confort.
+          En UnderGround, apostamos por la exclusividad y el detalle en cada producto.
+        </p>
+        
+      </section>
+      <Footer />
     </>
-  )
-}
-
+  );
+};
 export default AcercaDe

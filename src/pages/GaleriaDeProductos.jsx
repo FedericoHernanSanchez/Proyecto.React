@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
 import ProductList from '../components/ProductList'
-import loading from '../assets/loading.gif'
+import loadingClothes from '../assets/loadingClothes.gif'
+import { CartContext } from '../context/CartContext'
+import './styleGaleriaDeProductos.css'
 
-const GaleriaDeProductos = ({productos,cargando,cart,agregarCarrito,borrarProducto}) => {
+const GaleriaDeProductos = () => {
+
+  const { cargando } = useContext(CartContext)
+
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart}/>
-      <h1>Galeria de productos</h1>
-       {
-        cargando  ? <img src={loading} alt='loading'></img> :
-        <ProductList productos={productos} agregarCarrito={agregarCarrito} />
-    }
-      <Footer/>
+      <Header />
+
+      <section >
+        <div className='galeria-container'>
+          <h1>Conozca nuestros Productos</h1>
+          <p>
+            En nuestro catálogo encontrará una gran variedad de productos diseñados para adaptarse a sus gustos y necesidades.
+            Descubra la calidad, estilo y originalidad que nos representa.
+          </p>
+        </div>
+
+
+        {cargando ? <img className='loading' src={loadingClothes} alt="Cargando..." /> : <ProductList />}
+      </section>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default GaleriaDeProductos

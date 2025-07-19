@@ -1,28 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
-import ProductList from '../components/ProductList'
-import loading from '../assets/loading.gif'
+import ProducList from '../components/ProductList'
+import loadingClothes from '../assets/loadingClothes.gif'
+import { CartContext } from '../context/CartContext'
+import './styleHome.css'
 
-const Home = ({productos,cargando,cart,agregarCarrito,borrarProducto}) => {
+const Home = () => {
+
+  const { cargando } = useContext(CartContext)
+
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart}/>
-      <main>
-        <h1>Bienvenidos a mi Tienda</h1>
+      <Header />
+
+      <section className="bienvenida-container">
+        <h1>Bienvenido a UnderGround</h1>
         <p>
-          Aca encontraras los mejores productos 
+          Encontrá tu ropa deseada en nuestro catálogo, con diseños exclusivos y variedad para todos los gustos.
+          Explora las últimas tendencias y prendas hechas para destacar tu estilo único.
+          Además, disfrutá de envíos rápidos y opciones de pago seguras para una experiencia de compra cómoda y confiable.
         </p>
-      </main>
+      </section>
 
-    {
-      cargando  ? <img src={loading} alt='loading'></img> :
-     <ProductList productos={productos} agregarCarrito={agregarCarrito}/>
-    }
+      {
+        cargando ? <img className="loading" src={loadingClothes} alt="Cargando..." /> :
+          <ProducList />
+      }
 
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
-
 export default Home

@@ -1,37 +1,120 @@
-nav{
-    background-color: #333;
-    color: white;
-    padding: 10px;   
+/* Header */
+
+.custom-navbar {
+  min-height: 100px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 
-ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
+
+
+.navbar .navbar-brand.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 50px;
+}
+
+@media (max-width: 550px) {
+  .navbar .navbar-brand.logo {
+    font-size: 1.3rem;
+  }
 }
 
 
-.link{
-    color: white;
-    text-decoration: none;
+.nav-aligned {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  list-style: none;
 }
 
-footer{
-    background-color: #f1f1f1;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    margin-top: 25px;
+
+
+.nav-aligned .link {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 
-.btn-cart{
-    background-color: transparent;
-    border: none;
+.nav-aligned .link:hover {
+  color: #e76f51;
 }
 
-.fa-cart-shopping{
-    color: white;
+.nav-aligned .link svg {
+  font-size: 1.5rem;
+}
+
+.link.active {
+  color: #e76f51; 
+  border-bottom: 2px solid #e76f51; 
+  font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #333;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+
+}
+
+.footer-title {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 20px 0px;
+}
+
+@media (max-width: 530px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 330px) {
+  .footer-title {
+    font-size: 2rem;
+  }
 }
