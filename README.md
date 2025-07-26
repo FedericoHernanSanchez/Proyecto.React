@@ -3,7 +3,7 @@ Proyecto React Talento Tech
 Este es mi proyecto React para el curso de Talento Tech Codo a Codo de React.Js, donde nos concentramos en aprender los conceptos de React y sus funcionalidades,se consumen los datos de los productos cargados en MockAPI Para acceder al panel de admin cargar los siguientes datos : 
 Admin
   admin@example.com  
-  contraseña admin123 
+  admin123 
 Cliente  
   client@example.com 
   cliente123
